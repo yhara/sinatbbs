@@ -14,5 +14,6 @@ end
 Comments.create_table unless Comments.table_exists?
 
 get '/' do
-  Comments.all.inspect
+  @comments = Comments.all
+  haml :index
 end
