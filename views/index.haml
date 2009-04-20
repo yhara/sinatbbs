@@ -21,3 +21,11 @@
         %input{:type => "submit"}
 
 %hr
+
+- @comments.each do |comment|
+  .comment
+    %h2== #{comment.title} (by #{comment.name})
+    .message
+      = comment.message
+
+  %hr
