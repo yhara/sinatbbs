@@ -1,0 +1,23 @@
+%hr
+
+%form{:method => "POST", :action => '/comment'}
+  %input{:type => "hidden", :value => "PUT"}
+  %table
+    %tr
+      %td 名前
+      %td 
+        %input{:type => "text", :name => "name"}
+    %tr
+      %td URL
+      %td
+        %input{:type => "text", :name => "url"}
+    %tr
+      %td 内容
+      %td
+        %textarea{:name => "message", :cols => 60, :rows => 8}
+    %tr
+      %td
+      %td
+        %input{:type => "submit"}
+
+%hr
