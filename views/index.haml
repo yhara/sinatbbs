@@ -1,5 +1,3 @@
-%hr
-
 %form{:method => "POST", :action => '/comment'}
   %input{:type => "hidden", :name => "_method", :value => "PUT"}
   %table
@@ -20,18 +18,12 @@
       %td
         %input{:type => "submit"}
 
-%hr
-
 - @comments.each do |comment|
   .comment
-    %h2
-      %span.title= h comment.title
-      %span.name== (#{h comment.name})
-
-    .date
-      = h comment.date
+    %h2= h comment.title
+    .info
+      %span.name== by #{h comment.name}
+      %span.date== (#{h comment.date})
 
     .message
       = comment.formatted_message
-
-  %hr
