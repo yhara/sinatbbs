@@ -1,16 +1,16 @@
 %hr
 
 %form{:method => "POST", :action => '/comment'}
-  %input{:type => "hidden", :value => "PUT"}
+  %input{:type => "hidden", :name => "_method", :value => "PUT"}
   %table
     %tr
       %td 名前
       %td 
         %input{:type => "text", :name => "name"}
     %tr
-      %td URL
+      %td タイトル
       %td
-        %input{:type => "text", :name => "url"}
+        %input{:type => "text", :name => "title"}
     %tr
       %td 内容
       %td

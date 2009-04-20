@@ -17,3 +17,13 @@ get '/' do
   @comments = Comments.all
   haml :index
 end
+
+put '/comment' do
+  Comments.create({
+    :name => request[:name],
+    :title => request[:title],
+    :message => request[:message],
+  })
+
+  redirect '/'
+end
