@@ -1,0 +1,18 @@
+= SinatBBS
+
+Sinatraで作った掲示板アプリケーションです。
+
+== 依存ライブラリ
+
+* Sinatra
+* Haml
+* Sequel
+* sqlite3-ruby
+
+== 起動方法
+
+  $ sudo gem install sinatra haml sequel sqlite3-ruby
+  $ ruby start.rb
+
+http://localhost:4567/
+
