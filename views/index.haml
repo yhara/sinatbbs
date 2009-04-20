@@ -25,13 +25,13 @@
 - @comments.each do |comment|
   .comment
     %h2
-      %span.title= comment.title
-      %span.name== (#{comment.name})
+      %span.title= h comment.title
+      %span.name== (#{h comment.name})
 
     .date
-      = comment.date
+      = h comment.date
 
     .message
-      = comment.message
+      = comment.formatted_message
 
   %hr
