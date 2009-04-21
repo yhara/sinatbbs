@@ -2,13 +2,17 @@ require 'sequel'
 Sequel::Model.plugin(:schema)
 
 Sequel.connect("sqlite://comments.db")
+
 class Comments < Sequel::Model
-  set_schema do
-    primary_key :id
-    string :name
-    string :title
-    text :message
-    timestamp :posted_date
+  unless table_exists?
+    set_schema do
+      primary_key :id
+      string :name
+      string :title
+      text :message
+      timestamp :posted_date
+    end
+    create_table
   end
 
   def date
@@ -19,4 +23,3 @@ class Comments < Sequel::Model
     Rack::Utils.escape_html(self.message).gsub(/\n/, "<br>")
   end
 end
-Comments.create_table unless Comments.table_exists?
