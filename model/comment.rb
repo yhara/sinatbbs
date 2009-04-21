@@ -1,7 +1,7 @@
 require 'sequel'
 Sequel::Model.plugin(:schema)
 
-DB = Sequel.connect("sqlite://comments.db")
+Sequel.connect("sqlite://comments.db")
 class Comments < Sequel::Model
   set_schema do
     primary_key :id
