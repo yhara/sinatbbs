@@ -23,6 +23,5 @@ put '/comment' do
     :message => request[:message],
     :posted_date => Time.now,
   })
-
   redirect '/'
 end
