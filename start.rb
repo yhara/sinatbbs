@@ -33,7 +33,7 @@ get '/style.css' do
 end
 
 get '/' do
-  @comments = Comments.order_by(:posted_date.desc)
+  @comments = Comments.order_by(Sequel.desc(:posted_date))
   haml :index
 end
 
