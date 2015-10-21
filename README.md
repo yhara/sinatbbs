@@ -15,7 +15,7 @@ Sinatraで作った掲示板アプリケーションです。
 
 ## 起動方法
 
-  $ bundle install
-  $ ruby start.rb
+    $ bundle install
+    $ ruby start.rb
 
 http://localhost:4567/
