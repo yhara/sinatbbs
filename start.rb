@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'sinatra'
-require 'model/comment.rb'
+require './model/comment.rb'
 
 helpers do
   include Rack::Utils; alias_method :h, :escape_html
